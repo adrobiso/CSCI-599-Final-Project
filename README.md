@@ -17,7 +17,7 @@ The observation space for an agent is comprised of the color of the goal vector 
 
 At each timestep, agents can perform a physical action and a communication action. Physical actions are the applications of a directional force. There is no collision between entities. Communication actions are utterances of a discrete symbol observed by all other agents. Agents can also choose not to utter a symbol.
 
-<img src="\images\environment.png" width="400">
+<img src="images/environment.png" width="400">
 
 Example view of the environment. Landmarks are opaque, while agents are slightly transparent.
 
@@ -32,12 +32,12 @@ As a replacement for NEAT, HyperNEAT was also investigated as a potential approa
 ## Results
 Promisingly, the networks were qualitatively observed to quickly learn to move to approximately the centroid of all landmarks, a behavior noted in Mordatch and Abbeel (2018). At this point however, progress completely stalls and a grounded compositional language never emerges. The genomes themselves are not completely stagnant though: the number of connections in each slowly decrease without any apparent impact on performance. This is particularly noteworthy as there is no penalty for complexity in NEAT, and the chances of adding and deleting a connection are the same, as well as for activating and deactivating a connection. This suggests that the simpler networks actually tend to perform slightly better than the more complex ones.
 
-<img src="\images\plots.png" width="400">
+<img src="images/plots.png" width="400">
 
 The networks also appear to begin to learn that smaller vocabularies are better, as the frequency of one symbol far exceed the rest, though it does so by choosing not to utter a symbol far less.
 
-<img src="\images\nkbarsinitial.png" width="400">
-<img src="\images\nkbars.png" width="400">
+<img src="images/nkbarsinitial.png" width="400">
+<img src="images/nkbars.png" width="400">
 
 ## References
 Kenneth O Stanley and Risto Miikkulainen. Evolving Neural Networks through Augmenting Topologies. *Evolutionary Computation*, 10(2):99-127, 2002.
