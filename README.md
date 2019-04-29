@@ -17,7 +17,7 @@ The observation space for an agent is comprised of the color of the goal vector 
 
 At each timestep, agents can perform a physical action and a communication action. Physical actions are the applications of a directional force. There is no collision between entities. Communication actions are utterances of a discrete symbol observed by all other agents. Agents can also choose not to utter a symbol.
 
-![Environment Image](/images/environment.png)
+![Environment Image](/images/environment.png =500x)
 Example view of the environment. Landmarks are opaque, while agents are slightly transparent.
 
 ## Models and Approaches
