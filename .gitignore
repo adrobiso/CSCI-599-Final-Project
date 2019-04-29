@@ -1,3 +1,5 @@
 .idea/
 __pycache__/
 saved_runs/
+multiagent/__pycache__/
+pytorch_neat/__pycache__/
