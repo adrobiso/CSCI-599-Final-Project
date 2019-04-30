@@ -30,7 +30,13 @@ As in Mordatch and Abbeel (2018), communication utterances were determined using
 As a replacement for NEAT, HyperNEAT was also investigated as a potential approach, but was quickly found to be very slow both in this work and in Lowell, Grabkovsky, and Birger (2011).
 
 ## Results
-Promisingly, the networks were qualitatively observed to quickly learn to move to approximately the centroid of all landmarks, a behavior noted in Mordatch and Abbeel (2018). At this point however, progress completely stalls and a grounded compositional language never emerges. The genomes themselves are not completely stagnant though: the number of connections in each slowly decrease without any apparent impact on performance. This is particularly noteworthy as there is no penalty for complexity in NEAT, and the chances of adding and deleting a connection are the same, as well as for activating and deactivating a connection. This suggests that the simpler networks actually tend to perform slightly better than the more complex ones.
+Promisingly, the networks were qualitatively observed to quickly learn to move to approximately the centroid of all landmarks, a behavior noted in Mordatch and Abbeel (2018). 
+
+<video width="320" height="240" controls>
+  <source src="https://raw.githubusercontent.com/adrobiso/CSCI-599-Final-Project/master/images/centroid.mp4" type="video/mp4">
+</video>
+
+At this point however, progress completely stalls and a grounded compositional language never emerges. The genomes themselves are not completely stagnant though: the number of connections in each slowly decrease without any apparent impact on performance. This is particularly noteworthy as there is no penalty for complexity in NEAT, and the chances of adding and deleting a connection are the same, as well as for activating and deactivating a connection. This suggests that the simpler networks actually tend to perform slightly better than the more complex ones.
 
 <img src="https://raw.githubusercontent.com/adrobiso/CSCI-599-Final-Project/master/images/plots.png">
 
