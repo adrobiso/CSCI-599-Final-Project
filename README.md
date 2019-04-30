@@ -32,7 +32,7 @@ As a replacement for NEAT, HyperNEAT was also investigated as a potential approa
 ## Results
 Promisingly, the networks were qualitatively observed to quickly learn to move to approximately the centroid of all landmarks, a behavior noted in Mordatch and Abbeel (2018). 
 
-<video controls>
+<video width="700" controls>
   <source src="https://raw.githubusercontent.com/adrobiso/CSCI-599-Final-Project/master/images/centroid.mp4" type="video/mp4">
 </video>
 
