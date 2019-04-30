@@ -2,3 +2,5 @@ torch
 gym
 click
 neat-python
+graphviz
+python-graphviz
