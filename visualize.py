@@ -28,22 +28,33 @@ def draw_net(config, genome, view=False, filename=None, node_names=None, show_di
         'height': '0.2',
         'width': '0.2'}
 
-    dot = graphviz.Digraph(format=fmt, node_attr=node_attrs)
+    dot = graphviz.Digraph(format=fmt, node_attr=node_attrs, graph_attr={'ranksep': '5'})
 
-    inputs = set()
-    for k in config.genome_config.input_keys:
-        inputs.add(k)
-        name = node_names.get(k, str(k))
-        input_attrs = {'style': 'filled', 'shape': 'box', 'fillcolor': node_colors.get(k, 'lightgray')}
-        dot.node(name, _attributes=input_attrs)
+    with dot.subgraph() as s:
+        s.attr(rank='same')
+        inputs = set()
+        prev_name = None
+        for k in config.genome_config.input_keys:
+            inputs.add(k)
+            name = node_names.get(k, str(k))
+            input_attrs = {'style': 'filled', 'shape': 'box', 'fillcolor': node_colors.get(k, 'lightgray')}
+            s.node(name, _attributes=input_attrs)
+            if prev_name:
+                dot.edge(prev_name, name, _attributes={'style': 'invis'})
+            prev_name = name
 
-    outputs = set()
-    for k in config.genome_config.output_keys:
-        outputs.add(k)
-        name = node_names.get(k, str(k))
-        node_attrs = {'style': 'filled', 'fillcolor': node_colors.get(k, 'lightblue')}
-
-        dot.node(name, _attributes=node_attrs)
+    with dot.subgraph() as s:
+        s.attr(rank='same')
+        outputs = set()
+        prev_name = None
+        for k in config.genome_config.output_keys:
+            outputs.add(k)
+            name = node_names.get(k, str(k))
+            node_attrs = {'style': 'filled', 'fillcolor': node_colors.get(k, 'lightblue')}
+            s.node(name, _attributes=node_attrs)
+            if prev_name:
+                dot.edge(prev_name, name, _attributes={'style': 'invis'})
+            prev_name = name
 
     if prune_unused:
         connections = set()
