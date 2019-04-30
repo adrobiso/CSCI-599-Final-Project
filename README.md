@@ -1,7 +1,6 @@
 # CSCI-599-Final-Project: Evolutionary Emergence of Grounded Compositional Language
 
-Multiagent environment code from: [multiagent-particle-envs](https://github.com/openai/multiagent-particle-envs)  
-PyTorch NEAT code from: [PyTorch-NEAT](https://github.com/uber-research/PyTorch-NEAT)
+By Alan Robison
 
 ## Introduction
 In 2018, Mordatch and Abbeel demonstrated the emergence of a grounded, compositional language in a multi-agent environment without any explicit reward for communication or exposure to human language (Mordatch and Abbeel, 2018). They proposed and developed a multi-agent environment in which language is neccesary for a solution to be reached, without explicitly rewarding language formation. For their agents, they utilized shared-policy gradient methods with distributed execution, with a network structure defined A Priori.
@@ -59,3 +58,7 @@ Kenneth O Stanley and Risto Miikkulainen. Evolving Neural Networks through Augme
 Igor Mordatch and Pieter Abeel. Emergence of Grounded Compositional Language in Multi-Agent Populations. In *Thirty-Second AAAI Congerence on Artificial Intelligence*, 2018.
 
 J. Lowell, S. Grabkovsky and K. Birger, "Comparison of NEAT and HyperNEAT Performance on a Strategic Decision-Making Problem," 2011 Fifth International Conference on Genetic and Evolutionary Computing, Xiamen, pp. 102-105, 2011.
+
+
+Multiagent environment code from: [multiagent-particle-envs](https://github.com/openai/multiagent-particle-envs)  
+PyTorch NEAT code from: [PyTorch-NEAT](https://github.com/uber-research/PyTorch-NEAT)
